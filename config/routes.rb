@@ -1,7 +1,17 @@
 Rails.application.routes.draw do
+  get 'users/new'
+
+  get 'users/edit'
+
+  get 'users/update'
+
   get 'static_pages/home'
 
   get 'static_pages/about_me'
+
+  get 'static_pages/services'
+
+  get 'static_pages/contact'
 
   root 'static_pages#home'
 
