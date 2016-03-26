@@ -1,0 +1,30 @@
+<!-- Form for adding a new post.
+Can tag with category (food, lifestyle, recipes) -->
+<h1>Add a post!</h1>
+
+<%= form_for(@post) do |f| %>
+<!-- Only admin can post. -->
+
+  <!-- Everything below is dynamic. -->
+  <div>
+    <%= f.label :title%>
+    <%= f.text_field :title%>
+  </div>
+
+  <div>
+    <%= f.label :category%>
+    <%= f.label :category%>
+  </div>
+
+
+  <!-- <div>
+    <%= f.label :img_url %>
+    <%= f.text_field :img_url%>
+  </div> -->
+
+  <div>
+    <%= f.label :text %>
+    <%= f.text_field :text, :style => "width: 200px; height: 100px"%>
+  </div>
+  <button type="button" id = "add-post" class="btn btn-success" ><%= f.submit %></button>
+<% end %>
