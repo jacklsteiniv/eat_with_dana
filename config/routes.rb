@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'posts/food_and_body'
+
+  get 'posts/lifestyle'
+
+  get 'posts/recipes'
+
   get 'users/new'
 
   get 'users/edit'
