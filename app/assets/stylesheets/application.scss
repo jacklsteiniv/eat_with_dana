@@ -45,13 +45,15 @@ li {
   display: inline;
 }
 
-#fb {
-  margin-left: 500px;
-}
-/*#contact-footer {
-  float: left;
+#copy {
+  display: inline-block;
+  text-align: left;
 }
 #social {
-  float: right;
-  display: inline-block;
-}*/
+  display: flex;
+  justify-content: flex-end;
+}
+
+#bottom p {
+  margin: 2em;
+}
