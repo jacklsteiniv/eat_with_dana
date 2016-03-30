@@ -1,0 +1,18 @@
+<% provide(:title, 'All posts') %>
+<h1>All Reviews</h1>
+
+<%= will_paginate %>
+
+<ul class="posts">
+  <% @posts.each do |post| %>
+    <h3><%= post.title %></h3>
+    <h3>Category: <%= post.category %>
+    <!-- Ultimately, the category will determine which page the post is shown on. -->
+    <h4>Reviewed by <%= User.find(post.user).name%> <%= time_ago_in_words(post.created_at) %> ago </h4>
+    <!-- <img class = "postpic" src = "<%= post.img_url%>"> -->
+    <button type="button" id = "see-post" class="btn btn-success"><%= link_to "See this review",
+   root_path%></button>
+  <% end %>
+</ul>
+
+<%= will_paginate %>

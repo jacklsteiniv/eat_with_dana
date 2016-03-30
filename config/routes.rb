@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
-  resources :posts, only: [:new, :index, :foot_and_body, :lifestyle, :recipes]
+  get 'posts/new'
+  get 'posts/food'
 
   get 'users/new'
 
@@ -21,6 +22,7 @@ Rails.application.routes.draw do
   root 'static_pages#home'
 
   resources :sessions, only: [:destroy, :new, :create]
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

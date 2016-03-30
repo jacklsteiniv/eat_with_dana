@@ -16,3 +16,8 @@ User.create(name:  "Dana Sutherland",
              admin: true)
 
 #Posts will be associated with her account.
+
+Post.create(category: "food and body",
+            user_id: 4,
+            text: "Here's some text",
+            title: "The first of many")
