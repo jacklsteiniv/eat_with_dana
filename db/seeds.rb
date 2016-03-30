@@ -5,3 +5,14 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+# Clean out current data.
+User.delete_all
+
+#Add Dana's admin account.
+User.create(name:  "Dana Sutherland",
+             email: "dana@dana.com",
+             password: "birds",
+             admin: true)
+
+#Posts will be associated with her account.
