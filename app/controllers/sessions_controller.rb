@@ -1,5 +1,7 @@
 class SessionsController < ApplicationController
 
+  include SessionsHelper
+
   def new
     @user = User.new
   end
@@ -20,7 +22,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    log_out if logged_in?
+    log_out
     redirect_to root_path
   end
 

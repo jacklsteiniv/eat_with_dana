@@ -19,8 +19,14 @@
          <li><a href="/posts/recipes">Recipes</a></li>
            <li><a href="/static_pages/services">Services</a></li>
            <li><a href="/static_pages/contact">Contact</a></li>
-           <li><a href="/users/login">Admin Login</a></li>
+
+           <% if logged_in?  %>
            <li><%= link_to 'Admin Post', posts_new_path %></li>
+           <li><%= link_to 'Log out', session_path(current_user), class: "btn btn-default navbar-btn", type: "button", method: :delete %></li>
+
+           <% else %>
+            <li><a href="/users/login">Admin Login</a></li>
+           <% end %>
    </nav>
   </div>
   </body>
