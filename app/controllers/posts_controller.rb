@@ -8,11 +8,18 @@ class PostsController < ApplicationController
     @post = Post.new
   end
 
+  def index
+    @posts = Post.paginate(page: params[:page])
+  end
+
   # Below, food_and_body ~= index
 
   def food
     @posts = Post.paginate(page: params[:page])
   end
+
+
+
 
   def create
     @post = Post.new(post_params)

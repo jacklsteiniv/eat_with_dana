@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
 
-  get 'posts/new'
-  get 'posts/food'
+  resources :posts
+
+  # resources :posts, only: [:new, :food]
 
   get 'users/new'
 

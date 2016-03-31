@@ -12,7 +12,7 @@
            <!-- Link above to about_me page. -->
            <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog <span class="caret"></span></a>
            <ul class="dropdown-menu">
-             <li><%= link_to 'Food & Body 101', posts_food_path %></a></li>
+             <li><%= link_to 'Food & Body 101', posts_path %></a></li>
              <li><a href="/posts/lifestyle">Lifestyle</a></li>
          </ul>
            </li>
@@ -21,7 +21,7 @@
            <li><a href="/static_pages/contact">Contact</a></li>
 
            <% if logged_in?  %>
-           <li><%= link_to 'Admin Post', posts_new_path %></li>
+           <li><%= link_to 'Admin Post', new_post_path %></li>
            <li><%= link_to 'Log out', session_path(current_user), class: "btn btn-default navbar-btn", type: "button", method: :delete %></li>
 
            <% else %>
