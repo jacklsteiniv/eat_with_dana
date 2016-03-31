@@ -1,0 +1,9 @@
+<h3>Title:<%= @post.title %></h3>
+    <h3>Category: <%= @post.category %>
+    <!-- Ultimately, the category will determine which page the post is shown on. -->
+    <h4>Reviewed by Dana <%= time_ago_in_words(@post.created_at) %> ago </h4>
+    <p id = "content"><%=@post.text%></p>
+    <p>Upvote | Downvote</p>
+    <!-- Add upvote/downvote model later? -->
+    <button type="button" id = "see-post" class="btn btn-success"><%= link_to 'Back to Posts',
+   posts_path%></button>

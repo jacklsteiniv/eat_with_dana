@@ -1,5 +1,5 @@
 <% provide(:title, 'All posts') %>
-<h1>All Reviews</h1>
+<h1>Food & Body 101</h1>
 
 <%= will_paginate %>
 
@@ -10,8 +10,8 @@
     <!-- Ultimately, the category will determine which page the post is shown on. -->
     <h4>Reviewed by Dana <%= time_ago_in_words(post.created_at) %> ago </h4>
     <!-- <img class = "postpic" src = "<%= post.img_url%>"> -->
-    <button type="button" id = "see-post" class="btn btn-success"><%= link_to "See this review",
-   root_path%></button>
+    <button type="button" id = "see-post" class="btn btn-success"><%= link_to "See this post",
+   post_path(post)%></button>
   <% end %>
 </ul>
 

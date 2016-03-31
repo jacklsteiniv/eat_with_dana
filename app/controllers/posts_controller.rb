@@ -12,6 +12,10 @@ class PostsController < ApplicationController
     @posts = Post.paginate(page: params[:page])
   end
 
+  def show
+    @post = Post.find(params[:id])
+  end
+
   # Below, food_and_body ~= index
 
   def food
