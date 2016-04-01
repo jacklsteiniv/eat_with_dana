@@ -2,8 +2,7 @@
 
 <div id="posts">
 <% @posts.each do |post| %>
-    <h1><%= post.title %></h1>
-    <h3>Cat ID:<%= post.category_id %></h3>
+    <h1>Title: <%= post.title %></h1>
     <h4>Reviewed by Dana <%= time_ago_in_words(post.created_at) %> ago </h4>
     <p id = "content"><%=post.text%></p>
     <p>Upvote | Downvote</p>
