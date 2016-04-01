@@ -27,10 +27,7 @@
            <li><%= link_to 'Admin Post', new_post_path %></li>
            <li><%= link_to 'Log out', session_path(current_user), class: "btn btn-default navbar-btn", type: "button", method: :delete %></li>
            <% end %>
-           <!-- Testing search functionality below -->
-           <form action="/static_pages/search-results" class="search-form" method="get" data-search-index="false">
-             <input type="text" placeholder="search" id="tipue_search_input" name="q">
-          </form>
+
    </nav>
   </div>
   </body>
