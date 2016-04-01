@@ -6,9 +6,13 @@ class PostsController < ApplicationController
 
   #Lifestyle
   def index
-    # @posts = Post.paginate(page: params[:page])
-    @posts = Post.all.lifestyle.paginate(page: params[:page])
-    # Testing scoping above.
+    # @posts = Post.all.lifestyle.paginate(page: params[:page])
+    if params[:category_id]
+      @category = Category.find params[:category_id]
+      @posts = @category.posts
+    else
+      @posts = Post.all
+    end
   end
 
   #Food & Body

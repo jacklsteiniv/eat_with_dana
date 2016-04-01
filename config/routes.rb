@@ -1,13 +1,15 @@
 Rails.application.routes.draw do
 
-  resources :posts
-  # get 'posts/index2'
-  get '/posts/index2', to: 'posts#index2'
-  get 'posts/food'
-  get 'posts/lifestyle'
-  get 'posts/recipes'
+  resources :categories
 
-  # resources :posts, only: [:new, :food]
+  resources :posts
+
+  # Posts are nested in categories - see posts for a specific category, etc.
+
+
+  # Search results
+
+  get 'static_pages/search-results'
 
   get 'users/new'
 

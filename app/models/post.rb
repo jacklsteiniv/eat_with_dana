@@ -1,7 +1,7 @@
 class Post < ActiveRecord::Base
 
     belongs_to :user
-    belongs_to :category
+    has_and_belongs_to_many :category
     default_scope -> { order(created_at: :desc) }
 
     # Below are the scopes for category 'tagging' when a post is created.

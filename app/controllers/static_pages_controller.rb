@@ -11,5 +11,8 @@ class StaticPagesController < ApplicationController
   def services
   end
 
+  def search_results
+  end
+
 
 end

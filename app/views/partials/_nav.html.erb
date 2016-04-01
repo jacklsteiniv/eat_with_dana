@@ -12,11 +12,12 @@
            <!-- Link above to about_me page. -->
            <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog <span class="caret"></span></a>
            <ul class="dropdown-menu">
-             <li><%= link_to 'Food & Body 101', posts_index2_path %></li>
+             <li> <%= link_to 'Food & Body', categories_path %></li>
+             <!-- Testing categories above. -->
              <li><%= link_to 'Lifestyle', posts_path %></li>
          </ul>
            </li>
-         <li><%= link_to 'Recipes', posts_recipes_path %></li>
+         <li><%= link_to 'Recipes', posts_path %></li>
          <li>
            <li><a href="/static_pages/services">Services</a></li>
            <li><a href="/static_pages/contact">Contact</a></li>
@@ -25,6 +26,10 @@
            <li><%= link_to 'Admin Post', new_post_path %></li>
            <li><%= link_to 'Log out', session_path(current_user), class: "btn btn-default navbar-btn", type: "button", method: :delete %></li>
            <% end %>
+           <!-- Testing search functionality below -->
+           <form action="/static_pages/search-results" class="search-form" method="get" data-search-index="false">
+             <input type="text" placeholder="search" id="tipue_search_input" name="q">
+          </form>
    </nav>
   </div>
   </body>
