@@ -1,0 +1,8 @@
+<!-- Show all posts for a specific category. -->
+
+<div id="posts">
+<% @posts.each do |post| %>
+    <h1><%= post.title %></h1>
+    <h3>Cat ID:<%= post.category_id %></h3>
+<% end %>
+</div>

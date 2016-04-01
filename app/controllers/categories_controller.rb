@@ -1,6 +1,8 @@
 class CategoriesController < ApplicationController
+
+  # Testing: food and body 101
   def show
-    @cat = Category.find(params[:id])
+    @cat = Category.find_by_id(2)
     @posts = @cat.posts
   end
 
