@@ -4,26 +4,34 @@ class PostsController < ApplicationController
 
   # before_action :logged_in_user, only: [:create, :destroy]
 
-  def new
-    @post = Post.new
-  end
-
+  #Lifestyle
   def index
-    @posts = Post.paginate(page: params[:page])
+    # @posts = Post.paginate(page: params[:page])
+    @posts = Post.all.lifestyle.paginate(page: params[:page])
+    # Testing scoping above.
   end
 
-  def show
-    @post = Post.find(params[:id])
+  #Food & Body
+  def index2
+    @posts = Post.all.food_and_body.paginate(page: params[:page])
   end
+
+  #Recipes
 
   # Below, food_and_body ~= index
 
   def food
-    @posts = Post.paginate(page: params[:page])
+    @posts = Post.all.food_and_body.paginate(page: params[:page])
   end
 
 
+  def lifestyle
+    @posts = Post.all.lifestyle.paginate(page: params[:page])
+  end
 
+  def recipes
+    @posts = Post.all.recipes.paginate(page: params[:page])
+  end
 
   def create
     @post = Post.new(post_params)
@@ -37,16 +45,18 @@ class PostsController < ApplicationController
   end
 
 
-  def lifestyle
+  def show
+    @post = Post.find(params[:id])
   end
 
-  def recipes
+   def new
+    @post = Post.new
   end
 
   private
 
   def post_params
-    params.require(:post).permit(:user_id, :title, :text, :category)
+    params.require(:post).permit(:user_id, :title, :text, :category_id)
   end
 
 

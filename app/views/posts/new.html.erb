@@ -12,8 +12,9 @@ Can tag with category (food, lifestyle, recipes) -->
   </div>
 
   <div>
-    <%= f.label :category%>
-    <%= f.text_field :category%>
+    <%= f.label :category_id%>
+    <%= f.collection_select :category_id, Category.order(:name),:id,:name %>
+
   </div>
 
 

@@ -7,17 +7,24 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 # Clean out current data.
-User.delete_all
+# User.delete_all
+Post.delete_all
 
 #Add Dana's admin account.
-User.create(name:  "Dana Sutherland",
-             email: "dana@dana.com",
-             password: "birds",
-             admin: true)
+# # User.create(name:  "Dana Sutherland",
+#              email: "dana@dana.com",
+#              password: "birds",
+#              admin: true)
 
 #Posts will be associated with her account.
 
+# Create your 3 categories below - id of 1,2,3 for food&body, lifestyle, and recipes.
+#You'll link posts to each category id in order to display them on separate pages.
+
+Category.create()
+
 Post.create(category: "food and body",
-            user_id: 4,
+            user_id: 5,
+
             text: "Here's some text",
             title: "The first of many")

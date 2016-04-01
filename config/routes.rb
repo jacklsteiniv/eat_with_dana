@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
 
   resources :posts
+  # get 'posts/index2'
+  get '/posts/index2', to: 'posts#index2'
+  get 'posts/food'
+  get 'posts/lifestyle'
+  get 'posts/recipes'
 
   # resources :posts, only: [:new, :food]
 

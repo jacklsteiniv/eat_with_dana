@@ -1,5 +1,5 @@
 <h3>Title:<%= @post.title %></h3>
-    <h3>Category: <%= @post.category %>
+    <h3>Category: <%= @post.category_id %>
     <!-- Ultimately, the category will determine which page the post is shown on. -->
     <h4>Reviewed by Dana <%= time_ago_in_words(@post.created_at) %> ago </h4>
     <p id = "content"><%=@post.text%></p>

@@ -12,20 +12,18 @@
            <!-- Link above to about_me page. -->
            <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog <span class="caret"></span></a>
            <ul class="dropdown-menu">
-             <li><%= link_to 'Food & Body 101', posts_path %></li>
-             <li><a href="/posts/lifestyle">Lifestyle</a></li>
+             <li><%= link_to 'Food & Body 101', posts_index2_path %></li>
+             <li><%= link_to 'Lifestyle', posts_path %></li>
          </ul>
            </li>
-         <li><a href="/posts/recipes">Recipes</a></li>
+         <li><%= link_to 'Recipes', posts_recipes_path %></li>
+         <li>
            <li><a href="/static_pages/services">Services</a></li>
            <li><a href="/static_pages/contact">Contact</a></li>
 
            <% if logged_in?  %>
            <li><%= link_to 'Admin Post', new_post_path %></li>
            <li><%= link_to 'Log out', session_path(current_user), class: "btn btn-default navbar-btn", type: "button", method: :delete %></li>
-
-           <% else %>
-            <li><a href="/users/login">Admin Login</a></li>
            <% end %>
    </nav>
   </div>
