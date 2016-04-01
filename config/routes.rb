@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
 
+
+
+  get 'categories/recipes' => 'categories#recipes'
+  get 'categories/food' => 'categories#food'
+  get 'categories/lifestyle' => 'categories#lifestyle'
+
+  # Resources have to go below the gets above, otherwise show overrides them.
+
   resources :categories
 
   resources :posts

@@ -12,12 +12,13 @@
            <!-- Link above to about_me page. -->
            <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog <span class="caret"></span></a>
            <ul class="dropdown-menu">
-             <li> <%= link_to 'Food & Body', categories_path %></li>
+             <li> <%= link_to 'Food & Body', categories_food_path(:category) %></li>
              <!-- Testing categories above. -->
-             <li><%= link_to 'Lifestyle', category_path(:id) %></li>
+             <li><%= link_to 'Lifestyle', categories_lifestyle_path %></li>
+             <!-- This takes you to the lifestyle category. -->
          </ul>
            </li>
-         <li><%= link_to 'Recipes', posts_path %></li>
+         <li><%= link_to 'Recipes', categories_recipes_path %></li>
          <li>
            <li><a href="/static_pages/services">Services</a></li>
            <li><a href="/static_pages/contact">Contact</a></li>
