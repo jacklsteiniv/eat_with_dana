@@ -1,7 +1,6 @@
 <ul class="cats">
   <% @cats.each do |cat| %>
     <h3><%= cat.name %></h3>
-    <h3>Category ID: <%= cat.id %>
     <!-- Ultimately, the category will determine which page the post is shown on. -->
     <button type="button" id = "see-post" class="btn btn-success"><%= link_to "Back Home",
    root_path%></button>

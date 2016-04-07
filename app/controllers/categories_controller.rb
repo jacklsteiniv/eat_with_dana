@@ -1,23 +1,19 @@
 class CategoriesController < ApplicationController
 
-   def show
-    @cat = Category.find_by_id(2)
-    # 2 is hard coded in.
-    @posts = @cat.posts
-  end
+
   #These 3 methods all use the index controller. Define routes
   def food
-    @cat = Category.find_by_id(1)
+    @cat = Category.find_by_id(4)
     @posts = @cat.posts
   end
 
   def lifestyle
-    @cat = Category.find_by_id(2)
+    @cat = Category.find_by_id(5)
     @posts = @cat.posts
   end
 
   def recipes
-    @cat = Category.find_by_id(3)
+    @cat = Category.find_by_id(6)
     @posts = @cat.posts
   end
 

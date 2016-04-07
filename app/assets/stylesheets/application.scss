@@ -16,6 +16,8 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+$content-width: 1400px;
+
 #header {
   // font-family: Futura;
   font-family: "Source Sans Pro", "Helvetica Neue", sans-serif;
@@ -72,4 +74,11 @@ li {
 
 #bottom p {
   margin: 2em;
+}
+
+.postpic {
+  width: 400px;
+  height: auto;
+  border-radius: 8px;
+  margin: 30px;
 }

@@ -7,24 +7,40 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 # Clean out current data.
-# User.delete_all
+User.delete_all
 Post.delete_all
 
-#Add Dana's admin account.
-# # User.create(name:  "Dana Sutherland",
-#              email: "dana@dana.com",
-#              password: "birds",
-#              admin: true)
 
+#Add Dana's admin account.
+User.create(name:  "Dana Sutherland",
+             email: "dana@dana.com",
+             password: "birds",
+             admin: true)
+#
 #Posts will be associated with her account.
 
-# Create your 3 categories below - id of 1,2,3 for food&body, lifestyle, and recipes.
+# Create your 3 categories below - id of 4,5,6 for food&body, lifestyle, and recipes.
 #You'll link posts to each category id in order to display them on separate pages.
 
-Category.create()
+Category.create(name: "Food & Body")
+Category.create(name: "Lifestyle")
+Category.create(name: "Recipes")
 
-Post.create(category: "food and body",
+
+Post.create(category_id: 4,
             user_id: 5,
+            text: "And is great for you!",
+            title: "Quinoa is great",
+            img_url: "http://p-fst2.pixstatic.com/54d00daa697ab00c2502b1dc/_w.540_s.fit_/2015-02-02-Quinoa-1.jpg")
 
-            text: "Here's some text",
-            title: "The first of many")
+Post.create(category_id: 6,
+            user_id: 5,
+            text: "Measurements:",
+            title: "Great smoothie recipe",
+            img_url: "http://ghk.h-cdn.co/assets/cm/15/11/54fe1823cc94c-jump-start-smoothies-recipe-ghk0911-xl.jpg")
+
+Post.create(category_id: 5,
+            user_id: 5,
+            text: "Lifestyle text here",
+            title: "Here's a lifestyle post!",
+            img_url: "http://lifestylehealthbenefits.com/sites/default/files/WomanRunningRiver.jpg")
