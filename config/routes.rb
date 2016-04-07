@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
 
+  # Contact form routing below
+  match '/contacts',     to: 'contacts#new',             via: 'get'
+  resources "contacts", only: [:new, :create]
 
+  #END contact
 
   get 'categories/recipes' => 'categories#recipes'
   get 'categories/food' => 'categories#food'
