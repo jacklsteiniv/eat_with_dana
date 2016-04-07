@@ -7,12 +7,14 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 # Clean out current data.
-User.delete_all
-Post.delete_all
+# User.delete_all
+# Post.delete_all
 
-
+Category.destroy(1)
+Category.destroy(2)
+Category.destroy(3)
 #Add Dana's admin account.
-User.create(name:  "Dana Sutherland",
+# User.create(name:  "Dana Sutherland",
              email: "dana@dana.com",
              password: "birds",
              admin: true)
@@ -22,16 +24,16 @@ User.create(name:  "Dana Sutherland",
 # Create your 3 categories below - id of 4,5,6 for food&body, lifestyle, and recipes.
 #You'll link posts to each category id in order to display them on separate pages.
 
-Category.create(name: "Food & Body")
-Category.create(name: "Lifestyle")
-Category.create(name: "Recipes")
+# Category.create(name: "Food & Body")
+# Category.create(name: "Lifestyle")
+# Category.create(name: "Recipes")
 
 
-Post.create(category_id: 4,
-            user_id: 5,
-            text: "And is great for you!",
-            title: "Quinoa is great",
-            img_url: "http://p-fst2.pixstatic.com/54d00daa697ab00c2502b1dc/_w.540_s.fit_/2015-02-02-Quinoa-1.jpg")
+# # Post.create(category_id: 4,
+#             user_id: 5,
+#             text: "And is great for you!",
+#             title: "Quinoa is great",
+#             img_url: "http://p-fst2.pixstatic.com/54d00daa697ab00c2502b1dc/_w.540_s.fit_/2015-02-02-Quinoa-1.jpg")
 
 Post.create(category_id: 6,
             user_id: 5,
